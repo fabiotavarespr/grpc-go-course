@@ -23,6 +23,7 @@ func main() {
 
 	// doSum(c)
 	// doPrimes(c)
-	doAverage(c)
+	// doAverage(c)
+	doMax(c)
 
 }
