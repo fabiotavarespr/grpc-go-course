@@ -16,7 +16,7 @@ func doAverage(c pb.CalculatorServiceClient) {
 		log.Fatalf("Error while opening the stream: %v\n", err)
 	}
 
-	numbers := []int32{1,2,3,4,5,6,7,8,9,10}
+	numbers := []int32{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
 	for _, number := range numbers {
 		log.Printf("Sending number: %d\n", number)
