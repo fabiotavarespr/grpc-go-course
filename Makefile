@@ -45,9 +45,9 @@ project := greet calculator blog
 
 all: $(project) ## Generate Pbs and build
 
-greet: $@ ## Generate Pbs and build for greet
-calculator: $@ ## Generate Pbs and build for calculator
-blog: $@ ## Generate Pbs and build for blog
+greet: fmt $@ ## Generate Pbs and build for greet
+calculator: fmt $@ ## Generate Pbs and build for calculator
+blog: fmt $@ ## Generate Pbs and build for blog
 
 $(project):
 	@${CHECK_DIR_CMD}
