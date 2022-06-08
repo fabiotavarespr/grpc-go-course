@@ -7,7 +7,7 @@ import (
 	pb "github.com/fabiotavarespr/grpc-go-course/calculator/proto"
 )
 
-func (s *Server) Max(stream pb.CalculatorService_MaxServer) error  {
+func (s *Server) Max(stream pb.CalculatorService_MaxServer) error {
 	log.Printf("Max function was invoked")
 
 	var maximum int32 = 0
@@ -23,13 +23,13 @@ func (s *Server) Max(stream pb.CalculatorService_MaxServer) error  {
 			log.Fatalf("Error while reading client stream %v\n", err)
 		}
 
-		if number := req.Number; number > maximum{
+		if number := req.Number; number > maximum {
 			maximum = number
 			err := stream.Send(&pb.MaxResponse{
 				Result: maximum,
 			})
 
-			if err != nil{
+			if err != nil {
 				log.Fatalf("Error while sending data to client: %v\n", err)
 			}
 		}
