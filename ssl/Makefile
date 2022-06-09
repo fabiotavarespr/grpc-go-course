@@ -43,7 +43,10 @@ endif
 .PHONY: clean ssl
 
 clean: ## Delete all credencials
-	@rm -rf ca.crt ca.key server.crt server.csr server.key server.pem
+	${RM_F_CMD} ssl/*.crt
+	${RM_F_CMD} ssl/*.csr
+	${RM_F_CMD} ssl/*.key
+	${RM_F_CMD} ssl/*.pem
 
 ssl: ## Create new certificates
 	@./ssl.sh
